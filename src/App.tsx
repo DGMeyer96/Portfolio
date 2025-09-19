@@ -81,10 +81,10 @@ function App(props: { disableCustomTheme?: boolean }) {
                 <Stack
                     direction={{ xs: 'column-reverse', md: 'row' }}
                     sx={{
-                    justifyContent: 'center',
-                    gap: { xs: 6, sm: 12 },
-                    p: 2,
-                    mx: 'auto',
+                        justifyContent: 'center',
+                        gap: { xs: 3, sm: 6 },
+                        p: 2,
+                        mx: 'auto',
                     }}
                 >
                     <Sidebar/>

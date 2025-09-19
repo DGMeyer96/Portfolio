@@ -1,4 +1,4 @@
-import { Tab, Tabs } from "@mui/material";
+import { Card, Paper, Tab, Tabs } from "@mui/material";
 import { type Dispatch } from "react";
 
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -19,11 +19,28 @@ export default function Header({
     };
 
     return (
-        <Tabs value={activeContent} onChange={handleChange} aria-label="header-navigation-tabs">
-            <Tab icon={<AccountCircleIcon />} label="About" value="about"/>
-            <Tab icon={<ArticleIcon />} label="Resume" value="resume"/>
-            <Tab icon={<WorkIcon />} label="Experence" value="experience"/>
-            <Tab icon={<InventoryIcon />} label="Projects" value="projects" />
-        </Tabs>
+        <Card
+        sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            borderRadius: 3,
+            width: '100%',
+            height: '100%',
+            p: 1,
+            boxShadow: 3,
+            border: 'none',
+            // bgcolor: 'primary.dark',
+            // '&:hover': {
+            //     bgcolor: 'primary.dark',
+            // },
+        }}
+    >
+            <Tabs value={activeContent} onChange={handleChange} aria-label="header-navigation-tabs">
+                <Tab icon={<AccountCircleIcon />} label="About" value="about" sx={{ width: 64 }}/>
+                <Tab icon={<ArticleIcon />} label="Resume" value="resume" sx={{ width: 64 }}/>
+                <Tab icon={<InventoryIcon />} label="Projects" value="projects" sx={{ width: 64 }}/>
+            </Tabs>
+        </Card>
     );
 }

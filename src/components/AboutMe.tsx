@@ -30,7 +30,7 @@ export default function AboutMe() {
     ];
 
     return (
-        <Stack direction="column" spacing={6} sx={{ width: '100%', height: '100%' }}>
+        <Stack direction="column" spacing={4} sx={{ width: '100%', height: '100%' }}>
             <Stack direction="column" spacing={2}>
                 <Stack direction="row">
                     <Typography variant="h3">
@@ -42,7 +42,7 @@ export default function AboutMe() {
                     My name is Daniel Meyer and I am a Full Stack Software Engineer 
                     born and raised in Southern California.My career has led me to a 
                     variety of development roles such as Software Tester, Engineer, 
-                    Architect, and Team Lead.I am also a enthusiast of all things 
+                    Architect, and Team Lead. I am also a enthusiast of all things 
                     combustion and electric. I enjoy being a home mechanic and it 
                     feeds my drive to understand the engineering behind all things 
                     whether it be hardware or software.
@@ -113,7 +113,7 @@ export default function AboutMe() {
                     </Typography>
                 </Stack>
                 <Chip color="primary" size="small" sx={{ width: '100%', height: 8 }} />
-                <Stack direction='row' spacing={6} sx={{ width: '100%', overflowX: 'scroll', pb: 2 }}>
+                <Stack direction='row' spacing={6} sx={{ width: '100%', overflowX: 'scroll', pb: 2, px: 1 }}>
                 {
                     skillsSVGs.map((skill, index) => (
                         <Link 
@@ -123,7 +123,7 @@ export default function AboutMe() {
                             rel="noopener noreferrer" 
                         >
                             <Paper elevation={5} sx={{ p:2, display: 'flex', justifyContent: 'center', alignItems: 'start' }}>
-                                <img src={skill.image} style={{ width: 90, height: 90 }}/> 
+                                <img src={skill.image} style={{ width: 100, height: 100 }}/> 
                             </Paper>
                         </Link>
                     ))

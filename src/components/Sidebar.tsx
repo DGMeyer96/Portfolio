@@ -49,7 +49,7 @@ export default function Sidebar() {
         >
             <Stack direction='column' spacing={3} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <Avatar alt="Daniel Meyer" src="/static/images/daniel_headshot-3.jpg" variant='rounded' sx={{ minWidth: 256, minHeight: 256 }} />
-                <Stack direction='column' sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <Stack direction='column' spacing={1} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     <Typography
                         component="h1"
                         variant="h4"
@@ -57,14 +57,14 @@ export default function Sidebar() {
                     >
                         Daniel Meyer
                     </Typography>         
-                    <Chip label="Software Engineer" variant="outlined"/>
+                    <Chip label="Software Engineer" variant="outlined" color='secondary'/>
                 </Stack>
                 <hr style={{ width: '100%' }}></hr>
                 <Stack direction='row' spacing={3} sx={{ width: '100%' }}>
                     <Paper elevation={5} sx={{ p:1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         <MailOutlineIcon color='primary' sx={{ width: 32, height: 32 }} />
                     </Paper>
-                    <Stack direction='column' sx={{ display: 'flex', justifyContent: 'left', alignItems: 'start' }}>
+                    <Stack direction='column'>
                         <Typography variant="subtitle1">
                             Email
                         </Typography>
@@ -77,7 +77,7 @@ export default function Sidebar() {
                     <Paper elevation={5} sx={{ p:1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         <PhoneIcon color='primary' sx={{ width: 32, height: 32 }} />
                     </Paper>
-                    <Stack direction='column' sx={{ display: 'flex', justifyContent: 'left', alignItems: 'start' }}>
+                    <Stack direction='column'>
                         <Typography variant="subtitle1">
                             Phone
                         </Typography>
@@ -90,7 +90,7 @@ export default function Sidebar() {
                     <Paper elevation={5} sx={{ p:1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         <NearMeIcon color='primary' sx={{ width: 32, height: 32 }} />
                     </Paper>
-                    <Stack direction='column' sx={{ display: 'flex', justifyContent: 'left', alignItems: 'start' }}>
+                    <Stack direction='column'>
                         <Typography variant="subtitle1">
                             Location
                         </Typography>

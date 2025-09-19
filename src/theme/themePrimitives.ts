@@ -412,7 +412,8 @@ export const typography = {
   h4: {
     fontSize: defaultTheme.typography.pxToRem(24),
     fontWeight: 600,
-    lineHeight: 1.5,
+    // lineHeight: 1.5,
+    textAlign: 'left',
   },
   h5: {
     fontSize: defaultTheme.typography.pxToRem(20),
@@ -422,17 +423,21 @@ export const typography = {
   },
   h6: {
     fontSize: defaultTheme.typography.pxToRem(18),
-    fontWeight: 600,
+    fontWeight: 200,
+    color: secondary[500],
+    textAlign: "left",
   },
   subtitle1: {
     fontSize: defaultTheme.typography.pxToRem(18),
     fontWeight: 300,
     color: primary[500],
+    textAlign: 'left',
   },
   subtitle2: {
     fontSize: defaultTheme.typography.pxToRem(14),
     fontWeight: 600,
     color: secondary[500],
+    textAlign: 'left',
   },
   body1: {
     fontSize: defaultTheme.typography.pxToRem(14),
