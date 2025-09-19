@@ -2,16 +2,22 @@
 Built using React + Vite + Typescript + Material UI.
 <br>This is deployed to a Raspberry Pi 3 running NGINX.
 
-## How to Run
+## Initial Setup
+- Install [node.js](https://nodejs.org/)
+- Install [npm](https://www.npmjs.com/) 
+- Run ```$ npm install```
+
+## How to Run (Local)
 ```$ npm run dev```
+<br>Open web browser and navigate to http://localhost:5173/
 
 ## Generate Build
 ```$ npm build```
 
-# Deployment Steps
+## How to Deploy
 
 
-### Dependencies
+## Dependencies
 - React
 - Vite
 - Typescript
