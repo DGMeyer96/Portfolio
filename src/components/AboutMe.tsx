@@ -15,6 +15,7 @@ import QueryStatsIcon from '@mui/icons-material/QueryStats';
 import AutoAwesomeMotionIcon from '@mui/icons-material/AutoAwesomeMotion';
 import ElectricCarIcon from '@mui/icons-material/ElectricCar';
 import WhatIDoItem from "./WhatIDoItem";
+import { gray } from "../theme/themePrimitives";
 
 export default function AboutMe() {
     
@@ -94,7 +95,7 @@ export default function AboutMe() {
                     </Typography>
                 </Stack>
                 <Chip color="primary" size="small" sx={{ width: '10%', height: 8 }} />
-                <Stack direction='row' spacing={6} sx={{ width: '100%', overflowX: 'scroll', pb: 2, px: 1 }}>
+                <Stack direction='row' spacing={3} sx={{ width: '100%', overflowX: 'scroll', pb: 2, px: 1 }}>
                 {
                     skillsSVGs.map((skill, index) => (
                         <Link 
@@ -103,7 +104,16 @@ export default function AboutMe() {
                             target="_blank" 
                             rel="noopener noreferrer" 
                         >
-                            <Paper elevation={5} sx={{ p:2, display: 'flex', justifyContent: 'center', alignItems: 'start' }}>
+                            <Paper 
+                            elevation={5} 
+                            sx={[
+                                { p:2, display: 'flex', justifyContent: 'center', alignItems: 'start' },
+                                // (theme) => ({
+                                //     ...theme.applyStyles('dark', {
+                                //         backgroundColor: gray[900],
+                                //     }),
+                                // })
+                            ]}>
                                 <img src={skill.image} style={{ width: 100, height: 100 }}/> 
                             </Paper>
                         </Link>

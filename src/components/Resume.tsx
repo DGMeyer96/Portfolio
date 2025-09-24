@@ -3,12 +3,24 @@ import WorkHistory from "./WorkHistory";
 
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import SchoolIcon from '@mui/icons-material/School';
+import { gray } from "../theme/themePrimitives";
 
 export default function Resume() {
 
     return (
-        <Stack direction="column" spacing={2} sx={{ width: '100%', maxHeight: '75vh' }}>
-            <Stack direction='column' spacing={2} sx={{ width: '100%', pb: 2, }}>
+        <Stack direction="column" spacing={1} sx={{ width: '100%', maxHeight: '75vh' }}>
+            <Stack 
+            direction='column' 
+            spacing={2} 
+            sx={[
+                { width: '100%', p: 1, },
+                // (theme) => ({
+                //     ...theme.applyStyles('dark', {
+                //         backgroundColor: gray[900],
+                //     }),
+                //     borderRadius: (theme.vars || theme).shape.borderRadius,
+                // })
+            ]}>
                 <Stack direction='row' spacing={2} >
                     <WorkOutlineIcon color='primary' sx={{ width: 48, height: 48 }} />
                     <Typography variant="h3" sx={{ pt: 1 }}>
@@ -116,7 +128,18 @@ export default function Resume() {
                 </Container>
             </Stack>
             {/* Education */}
-            <Stack direction='column' spacing={2} sx={{ width: '100%', pb: 2 }}>
+            <Stack 
+            direction='column' 
+            spacing={2} 
+            sx={[
+                { width: '100%', p: 1 },
+                // (theme) => ({
+                //     ...theme.applyStyles('dark', {
+                //         backgroundColor: gray[900],
+                //     }),
+                //     borderRadius: (theme.vars || theme).shape.borderRadius,
+                // })
+            ]}>
                 <Stack direction='row' spacing={2} >
                     <SchoolIcon color='primary' sx={{ width: 48, height: 48 }} />
                     <Typography variant="h3" sx={{ pt: 1 }}>

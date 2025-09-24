@@ -5,6 +5,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ArticleIcon from '@mui/icons-material/Article';
 import WorkIcon from '@mui/icons-material/Work';
 import InventoryIcon from '@mui/icons-material/Inventory';
+import { gray } from "../theme/themePrimitives";
 
 export default function Header({ 
     activeContent, 
@@ -20,21 +21,29 @@ export default function Header({
 
     return (
         <Card
-        sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            borderRadius: 3,
-            width: '100%',
-            height: '100%',
-            p: 1,
-            boxShadow: 3,
-            border: 'none',
-            // bgcolor: 'primary.dark',
-            // '&:hover': {
-            //     bgcolor: 'primary.dark',
-            // },
-        }}
+        sx={[
+            {
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                borderRadius: 3,
+                width: '100%',
+                height: '100%',
+                p: 1,
+                boxShadow: 3,
+                border: 'none',
+                // bgcolor: 'primary.dark',
+                // '&:hover': {
+                //     bgcolor: 'primary.dark',
+                // },
+            },
+            (theme) => ({
+                ...theme.applyStyles('dark', {
+                    backgroundColor: gray[800],
+                }),
+                borderRadius: (theme.vars || theme).shape.borderRadius,
+            })
+        ]}
     >
             <Tabs value={activeContent} onChange={handleChange} aria-label="header-navigation-tabs">
                 <Tab icon={<AccountCircleIcon />} label="About" value="about" sx={{ width: 64 }}/>

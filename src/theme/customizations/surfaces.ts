@@ -1,4 +1,4 @@
-import { alpha, type Theme, type Components } from '@mui/material/styles';
+import { alpha, type Theme, type Components, lighten } from '@mui/material/styles';
 import { gray } from '../themePrimitives';
 
 /* eslint-disable import/prefer-default-export */
@@ -54,6 +54,33 @@ export const surfacesCustomizations: Components<Theme> = {
     defaultProps: {
       elevation: 0,
     },
+    styleOverrides: {
+      root: ({ theme }) => {
+        return {
+          ...theme.applyStyles('dark', {
+            backgroundColor: gray[900],
+          }),
+        }
+      }
+      // root: ({ theme, ownerState }) => ({
+      //   ...(theme.palette.mode === 'dark' &&
+      //     ownerState.elevation && {
+      //       backgroundColor: lighten(theme.palette.background.paper, ownerState.elevation * 0.05), // Adjust as needed
+      //     }),
+      // }),
+    },
+    variants: [
+      { 
+        props: { elevation: 5 }, 
+        style: ({ theme }) => {
+          return {
+            ...theme.applyStyles('dark', {
+              backgroundColor: gray[900],
+            }),
+          }
+        }
+      },
+    ]
   },
   MuiCard: {
     styleOverrides: {
@@ -67,7 +94,7 @@ export const surfacesCustomizations: Components<Theme> = {
           border: `1px solid ${(theme.vars || theme).palette.divider}`,
           boxShadow: 'none',
           ...theme.applyStyles('dark', {
-            backgroundColor: gray[800],
+            backgroundColor: gray[900],
           }),
           variants: [
             {
@@ -110,4 +137,16 @@ export const surfacesCustomizations: Components<Theme> = {
       },
     },
   },
+  // MuiStack: {
+  //   styleOverrides: {
+  //     root: ({ theme }) => {
+  //       return {
+  //         ...theme.applyStyles('dark', {
+  //           backgroundColor: gray[800],
+  //           borderRadius: (theme.vars || theme).shape.borderRadius,
+  //         }),
+  //       }
+  //     }
+  //   }
+  // }
 };
