@@ -14,6 +14,7 @@ import BuildIcon from '@mui/icons-material/Build';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
 import AutoAwesomeMotionIcon from '@mui/icons-material/AutoAwesomeMotion';
 import ElectricCarIcon from '@mui/icons-material/ElectricCar';
+import WhatIDoItem from "./WhatIDoItem";
 
 export default function AboutMe() {
     
@@ -54,55 +55,35 @@ export default function AboutMe() {
                         What I do
                     </Typography>
                 </Stack>
-                <Chip color="primary" size="small" sx={{ width: '100%', height: 8 }} />
+                <Chip color="primary" size="small" sx={{ width: '10%', height: 8 }} />
                 <Stack direction='row' spacing={2} sx={{ width: '100%', pb: 2 }}>
                     <Stack direction='column' spacing={2} sx={{ width: '100%', pb: 2 }}>
-                        <Paper elevation={5} sx={{ p:2, display: 'flex', justifyContent: 'center', alignItems: 'start', height: 200 }}>
-                            <Stack direction='row' spacing={2} >
-                                <ElectricCarIcon color='primary' sx={{ width: 48, height: 48 }} />
-                                <Stack direction='column' spacing={2} sx={{ width: '100%', pb: 2 }}>
-                                    <Typography variant="h5">Embedded Systems</Typography>
-                                    <Typography variant="body1">
-                                        I have experience developing software for embedded systems where resources are precious and limited. These include for Automotive and Low Power (i.e. RPi/ESP32) applications.
-                                    </Typography>
-                                </Stack>
-                            </Stack>
-                        </Paper>
-                        <Paper elevation={5} sx={{ p:2, display: 'flex', justifyContent: 'center', alignItems: 'start', height: 150 }}>
-                            <Stack direction='row' spacing={2} >
-                                <AutoAwesomeMotionIcon color='primary' sx={{ width: 48, height: 48 }} />
-                                <Stack direction='column' spacing={2} sx={{ width: '100%', pb: 2 }}>
-                                    <Typography variant="h5">Threading</Typography>
-                                    <Typography variant="body1">
-                                        I specialize in improving software performance via asynchronous and multi-threaded systems design.
-                                    </Typography>
-                                </Stack>
-                            </Stack>
-                        </Paper>
+                        <WhatIDoItem 
+                            IconComponent={ElectricCarIcon} 
+                            label="Embedded Systems" 
+                            text="I have experience developing software for embedded systems where resources are precious and limited. These include for Automotive and Low Power (i.e. RPi/ESP32) applications." 
+                            size="lg" 
+                        />
+                        <WhatIDoItem 
+                            IconComponent={AutoAwesomeMotionIcon} 
+                            label="Threading" 
+                            text="I specialize in improving software performance via asynchronous and multi-threaded systems design." 
+                            size="md" 
+                        />
                     </Stack>
                     <Stack direction='column' spacing={2} sx={{ width: '100%', pb: 2 }}>
-                        <Paper elevation={5} sx={{ p:2, display: 'flex', justifyContent: 'center', alignItems: 'start', height: 200 }}>
-                            <Stack direction='row' spacing={2} >
-                                <BuildIcon color='primary' sx={{ width: 48, height: 48 }} />
-                                <Stack direction='column' spacing={2} sx={{ width: '100%', pb: 2 }}>
-                                    <Typography variant="h5">Development Tools</Typography>
-                                    <Typography variant="body1">
-                                        More and more features are being requested but the number of developers remains the same. We need to improve the performance of not only the application but those who create it as well.
-                                    </Typography>
-                                </Stack>
-                            </Stack>
-                        </Paper>
-                        <Paper elevation={5} sx={{ p:2, display: 'flex', justifyContent: 'center', alignItems: 'start', height: 150 }}>
-                            <Stack direction='row' spacing={2} >
-                                <QueryStatsIcon color='primary' sx={{ width: 48, height: 48 }} />
-                                <Stack direction='column' spacing={2} sx={{ width: '100%', pb: 2 }}>
-                                    <Typography variant="h5">Data Analysis</Typography>
-                                    <Typography variant="body1">
-                                        Data is more important than ever whether it be for measuring application health and performance or finding trends.
-                                    </Typography>
-                                </Stack>
-                            </Stack>
-                        </Paper>
+                        <WhatIDoItem 
+                            IconComponent={BuildIcon} 
+                            label="Development Tools" 
+                            text="More and more features are being requested but the number of developers remains the same. We need to improve the performance of not only the application but those who create it as well." 
+                            size="lg" 
+                        />
+                        <WhatIDoItem 
+                            IconComponent={QueryStatsIcon} 
+                            label="Data Analysis" 
+                            text="Data is more important than ever whether it be for measuring application health and performance or finding trends." 
+                            size="md" 
+                        />
                     </Stack>
                 </Stack>
             </Stack>
@@ -112,7 +93,7 @@ export default function AboutMe() {
                         Skills
                     </Typography>
                 </Stack>
-                <Chip color="primary" size="small" sx={{ width: '100%', height: 8 }} />
+                <Chip color="primary" size="small" sx={{ width: '10%', height: 8 }} />
                 <Stack direction='row' spacing={6} sx={{ width: '100%', overflowX: 'scroll', pb: 2, px: 1 }}>
                 {
                     skillsSVGs.map((skill, index) => (

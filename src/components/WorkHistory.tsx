@@ -17,7 +17,7 @@ export default function WorkHistory({
 }) {
 
     return (
-        <Stack direction='row' spacing={2} >
+        <Stack direction='row' spacing={2} sx={{ pb: 2 }}>
             <Stack direction="column" spacing={0} sx={{ minWidth: 180 }}>
                 <Typography variant="subtitle2">
                     {timeWorked}
@@ -27,7 +27,7 @@ export default function WorkHistory({
                 </Typography>
             </Stack>
             <Typography variant="body1">
-                <Stack direction="column" spacing={1}>
+                <Stack direction="column" spacing={0}>
                     <Typography variant="h5">
                         {position}
                     </Typography>

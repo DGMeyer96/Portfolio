@@ -1,14 +1,13 @@
 import { styled } from '@mui/material/styles';
 import MuiCard from '@mui/material/Card';
-import { Avatar, Box, Chip, Link, Paper, Stack, Typography } from '@mui/material';
-import { grey } from '@mui/material/colors';
+import { Avatar, Chip, Link, Paper, Stack, Typography } from '@mui/material';
 
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import NearMeIcon from '@mui/icons-material/NearMe';
 import PhoneIcon from '@mui/icons-material/Phone';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { primary } from '../theme/themePrimitives';
+import IconWith2Text from './IconWith2Text';
 
 const Card = styled(MuiCard)(({ theme }) => ({
   display: 'flex',
@@ -60,45 +59,9 @@ export default function Sidebar() {
                     <Chip label="Software Engineer" variant="outlined" color='secondary'/>
                 </Stack>
                 <hr style={{ width: '100%' }}></hr>
-                <Stack direction='row' spacing={3} sx={{ width: '100%' }}>
-                    <Paper elevation={5} sx={{ p:1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                        <MailOutlineIcon color='primary' sx={{ width: 32, height: 32 }} />
-                    </Paper>
-                    <Stack direction='column'>
-                        <Typography variant="subtitle1">
-                            Email
-                        </Typography>
-                        <Typography variant="subtitle2">
-                            dmlegoman96@gmail.com
-                        </Typography>
-                    </Stack>
-                </Stack>
-                <Stack direction='row' spacing={3} sx={{ width: '100%' }}>
-                    <Paper elevation={5} sx={{ p:1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                        <PhoneIcon color='primary' sx={{ width: 32, height: 32 }} />
-                    </Paper>
-                    <Stack direction='column'>
-                        <Typography variant="subtitle1">
-                            Phone
-                        </Typography>
-                        <Typography variant="subtitle2">
-                            +1(951)537-8567
-                        </Typography>
-                    </Stack>
-                </Stack>
-                <Stack direction='row' spacing={3} sx={{ width: '100%' }}>
-                    <Paper elevation={5} sx={{ p:1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                        <NearMeIcon color='primary' sx={{ width: 32, height: 32 }} />
-                    </Paper>
-                    <Stack direction='column'>
-                        <Typography variant="subtitle1">
-                            Location
-                        </Typography>
-                        <Typography variant="subtitle2">
-                            Chino, CA USA
-                        </Typography>
-                    </Stack>
-                </Stack>
+                <IconWith2Text IconComponent={MailOutlineIcon} label='Email' text='dmlegoman96@gmail.com' />
+                <IconWith2Text IconComponent={PhoneIcon} label='Phone' text='+1(951)537-8567' />
+                <IconWith2Text IconComponent={NearMeIcon} label='Location' text='Chino, CA USA' />
                 <hr style={{ width: '100%' }}></hr>
                 <Stack direction='row' spacing={3}>
                     <Link href="https://github.com/DGMeyer96" target="_blank" rel="noopener noreferrer">

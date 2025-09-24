@@ -8,10 +8,6 @@ export default function Resume() {
 
     return (
         <Stack direction="column" spacing={2} sx={{ width: '100%', maxHeight: '75vh' }}>
-            {/* <Typography variant="h3">
-                Resume
-            </Typography> */}
-            {/* Experience */}
             <Stack direction='column' spacing={2} sx={{ width: '100%', pb: 2, }}>
                 <Stack direction='row' spacing={2} >
                     <WorkOutlineIcon color='primary' sx={{ width: 48, height: 48 }} />
@@ -19,7 +15,7 @@ export default function Resume() {
                         Work History
                     </Typography>
                 </Stack>
-                <Chip color="primary" size="small" sx={{ width: '100%', height: 8 }} />
+                <Chip color="primary" size="small" sx={{ width: '10%', height: 8 }} />
                 <Container sx={{ width: '100%', maxHeight: '40vh', overflowY: 'scroll', pl:0 }}>
                     <WorkHistory 
                         timeWorked={"Feb. 2025 - Present"}
@@ -127,7 +123,7 @@ export default function Resume() {
                         Education
                     </Typography>
                 </Stack>
-                <Chip color="primary" size="small" sx={{ width: '100%', height: 8 }} />
+                <Chip color="primary" size="small" sx={{ width: '10%', height: 8 }} />
                 <Container sx={{ width: '100%', maxHeight: '20vh', overflowY: 'scroll', pl:0 }}>
                     {/* <hr></hr> */}
                     <Typography variant="h4">
