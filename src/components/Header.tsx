@@ -1,11 +1,10 @@
 import { Card, Paper, Tab, Tabs } from "@mui/material";
 import { type Dispatch } from "react";
+import { gray } from "../theme/themePrimitives";
 
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ArticleIcon from '@mui/icons-material/Article';
-import WorkIcon from '@mui/icons-material/Work';
 import InventoryIcon from '@mui/icons-material/Inventory';
-import { gray } from "../theme/themePrimitives";
 
 export default function Header({ 
     activeContent, 
@@ -14,11 +13,6 @@ export default function Header({
     activeContent: string, 
     setActiveContent: Dispatch<React.SetStateAction<string>>
 }) {
-
-    const handleChange = (_: React.SyntheticEvent, newValue: string) => {
-        setActiveContent(newValue);
-    };
-
     return (
         <Card
         sx={[
@@ -43,9 +37,8 @@ export default function Header({
                 }),
                 borderRadius: (theme.vars || theme).shape.borderRadius,
             })
-        ]}
-    >
-            <Tabs value={activeContent} onChange={handleChange} aria-label="header-navigation-tabs">
+        ]}>
+            <Tabs value={activeContent} onChange={(_, newValue) => setActiveContent(newValue)} aria-label="header-navigation-tabs">
                 <Tab icon={<AccountCircleIcon />} label="About" value="about" sx={{ width: 64 }}/>
                 <Tab icon={<ArticleIcon />} label="Resume" value="resume" sx={{ width: 64 }}/>
                 <Tab icon={<InventoryIcon />} label="Projects" value="projects" sx={{ width: 64 }}/>

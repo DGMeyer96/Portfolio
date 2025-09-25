@@ -80,7 +80,7 @@ export default function ProjectsList({
                 </Stack>
                 <Chip color="primary" size="small" sx={{ width: '10%', height: 8 }} />
             </Stack>
-            <ImageList sx={{ width: 500, height: '100%' }} variant="masonry" cols={2} gap={8}>
+            <ImageList sx={{ width: '100%', height: '100%' }} variant="masonry" cols={3} gap={8}>
             {
                 projectList.map((item) => (
                     <ImageListItem key={item.img}>

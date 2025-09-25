@@ -1,37 +1,25 @@
-import { Chip, Link, Paper, Stack, Typography } from "@mui/material";
-import WhatIDoItem from "./WhatIDoItem";
+import { Stack, Typography, Chip, Link, Paper } from "@mui/material";
+import WhatIDoItem from "../WhatIDoItem";
 
-import Arduino from "../assets/arduino.svg";
-import AndroidStudio from "../assets/android-studio.svg";
-import Cpp from "../assets/cpp.svg";
-import CSharp from "../assets/csharp.svg";
-import OpenGL from "../assets/opengl.svg";
-import Python from "../assets/python.svg";
-import React from "../assets/react.svg";
-import Unity from "../assets/unity.svg";
-import Unreal from "../assets/unreal.svg";
+// import Arduino from "../../assets/arduino.svg";
+// import AndroidStudio from "../../assets/android-studio.svg";
+// import Cpp from "../../assets/cpp.svg";
+// import CSharp from "../../assets/csharp.svg";
+// import OpenGL from "../../assets/opengl.svg";
+// import Python from "../../assets/python.svg";
+// import React from "../../assets/react.svg";
+// import Unity from "../../assets/unity.svg";
+// import Unreal from "../../assets/unreal.svg";
 
 import BuildIcon from '@mui/icons-material/Build';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
 import AutoAwesomeMotionIcon from '@mui/icons-material/AutoAwesomeMotion';
 import ElectricCarIcon from '@mui/icons-material/ElectricCar';
+import WhatIDoItemMobile from "./WhatIDoItemMobile";
 
-export default function AboutMe() {
-    
-    const skillsSVGs = [
-        { url: "https://unity.com/", image: Unity },
-        { url: "https://developer.android.com/", image: AndroidStudio },
-        { url: "https://www.python.org/", image: Python },
-        { url: "https://react.dev/", image: React },
-        { url: "https://www.arduino.cc/", image: Arduino },
-        { url: "https://www.unrealengine.com/", image: Unreal },
-        { url: "", image: Cpp },
-        { url: "", image: CSharp },
-        { url: "https://www.opengl.org/", image: OpenGL },
-    ];
-
+export default function AboutMeMobile() {
     return (
-        <Stack direction="column" spacing={4} sx={{ width: '100%', height: '100%', overflowY: 'scroll' }}>
+        <Stack direction="column" spacing={4}>
             <Stack direction="column" spacing={2}>
                 <Stack direction="row">
                     <Typography variant="h3">
@@ -56,29 +44,29 @@ export default function AboutMe() {
                     </Typography>
                 </Stack>
                 <Chip color="primary" size="small" sx={{ width: '10%', height: 8 }} />
-                <Stack direction='row' spacing={2} sx={{ width: '100%', pb: 2 }}>
-                    <Stack direction='column' spacing={2} sx={{ width: '100%', pb: 2 }}>
-                        <WhatIDoItem 
+                <Stack direction='row' spacing={2} sx={{ pb: 2 }}>
+                    <Stack direction='column' spacing={2} sx={{ pb: 2 }}>
+                        <WhatIDoItemMobile 
                             IconComponent={ElectricCarIcon} 
                             label="Embedded Systems" 
                             text="I have experience developing software for embedded systems where resources are precious and limited. These include for Automotive and Low Power (i.e. RPi/ESP32) applications." 
                             size="lg" 
                         />
-                        <WhatIDoItem 
+                        <WhatIDoItemMobile 
                             IconComponent={AutoAwesomeMotionIcon} 
                             label="Threading" 
                             text="I specialize in improving software performance via asynchronous and multi-threaded systems design." 
                             size="md" 
                         />
                     </Stack>
-                    <Stack direction='column' spacing={2} sx={{ width: '100%', pb: 2 }}>
-                        <WhatIDoItem 
+                    <Stack direction='column' spacing={2} sx={{ pb: 2 }}>
+                        <WhatIDoItemMobile 
                             IconComponent={BuildIcon} 
                             label="Development Tools" 
                             text="More and more features are being requested but the number of developers remains the same. We need to improve the performance of not only the application but those who create it as well." 
                             size="lg" 
                         />
-                        <WhatIDoItem 
+                        <WhatIDoItemMobile 
                             IconComponent={QueryStatsIcon} 
                             label="Data Analysis" 
                             text="Data is more important than ever whether it be for measuring application health and performance or finding trends." 
@@ -95,7 +83,7 @@ export default function AboutMe() {
                 </Stack>
                 <Chip color="primary" size="small" sx={{ width: '10%', height: 8 }} />
                 <Stack direction='row' spacing={3} sx={{ width: '100%', overflowX: 'scroll', pb: 2, px: 1 }}>
-                {
+                {/* {
                     skillsSVGs.map((skill, index) => (
                         <Link 
                             key={index} 
@@ -117,7 +105,7 @@ export default function AboutMe() {
                             </Paper>
                         </Link>
                     ))
-                }
+                } */}
                 </Stack>
             </Stack>
         </Stack>

@@ -34,17 +34,31 @@ export default function MEngine92Project({
                 <Stack direction="row" sx={{ justifyContent: "space-between", alignItems: "center", }}>
                     <Stack direction="column" spacing={1}>
                         <Typography variant="body1">
-                            Create a virtual reality experience in Unreal Engine that will introduce students to archeology through Virtual Reality and Multiplayer by entering the world of Ambrosia to find possible dig sites and identify artifacts.
+                            This project came about after reading the <strong>Game Engine Black Book</strong> series by <strong>Fabian Sanglard</strong>. After reading the Wolfesnstein 3D and DOOM books I thought it would be a fun experiment to create my own Raycast Renderer.
+                        </Typography>
+                        <Typography variant="body1">
+                            This is part one of a two part project I want to complete. The idea is to replicate the capabilities of the Wolfenstein 3D game engine, which was released in May, 1992 (hence the name).
+                        </Typography>
+                        <Typography variant="body1">
+                            My intention is to follow this up with a MEngine93 which will simulate the capabilties of the DOOM engine.
+                        </Typography>
+                        <Typography variant="body1">
+                            Development:
                             <ul>
-                                <li>Created custom Virtual Reality interaction and movement system that features slow walking instead of teleporting due to the need to perform transactional surveys.</li>
-                                <li>Multiplayer was built around up to 4 players connecting to a dedicated server with proper object, character, and movement replication.</li>
-                                <li>VR and Multiplayer functionality were created in C++ with some UI elements in Blueprint.</li>
-                                <li>Imported 3D scanned models of real artifacts for students to find.</li>
-                                <li>Utilizes Steamworks SDK integration for multiplayer integration and matchmaking.</li>
+                                <li>Written in C.</li>
+                                <li>Built on the Raylib 5 framework.</li>
+                                <li>Intention is to rewrite eventually in Rust (excuse to make something using Rust).</li>
+                            </ul>
+                            Feature Roadmap:
+                            <ul>
+                                <li>Level Creator</li>
+                                <li>Sprite Editor</li>
+                                <li>Example Game</li>
                             </ul>
                         </Typography>
                     </Stack>
                 </Stack>
+                {/* Images */}
                 <ImageList sx={{ width: '100%', height: '100%' }} cols={2} rowHeight={350}>
                     {
                         images.map((item, index) => (
