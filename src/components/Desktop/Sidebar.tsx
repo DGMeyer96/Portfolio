@@ -7,7 +7,7 @@ import NearMeIcon from '@mui/icons-material/NearMe';
 import PhoneIcon from '@mui/icons-material/Phone';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import IconWith2Text from './IconWith2Text';
+import IconWith2Text from '../IconWith2Text';
 
 const Card = styled(MuiCard)(({ theme }) => ({
   display: 'flex',

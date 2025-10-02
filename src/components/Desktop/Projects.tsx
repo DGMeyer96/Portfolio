@@ -1,13 +1,13 @@
 
 import { useState } from "react";
-import FlightcaseProject from "./Projects/FlightcaseProject";
-import ProjectsList from "./Projects/ProjectsList";
-import FiskerOceanProject from "./Projects/FiskerOceanProject";
-import ArduinoCanBusProject from "./Projects/ArduinoCanBusProject";
-import CompanionSpeciesProject from "./Projects/CompanionSpeciesProject";
-import VirtualLabTemplateProject from "./Projects/VirtualLabTemplateProject";
-import AmbrosiaProject from "./Projects/AmbrosiaProject";
-import MEngine92Project from "./Projects/MEngine92Project";
+import FlightcaseProject from "../Projects/FlightcaseProject";
+import ProjectsList from "../Projects/ProjectsList";
+import FiskerOceanProject from "../Projects/FiskerOceanProject";
+import ArduinoCanBusProject from "../Projects/ArduinoCanBusProject";
+import CompanionSpeciesProject from "../Projects/CompanionSpeciesProject";
+import VirtualLabTemplateProject from "../Projects/VirtualLabTemplateProject";
+import AmbrosiaProject from "../Projects/AmbrosiaProject";
+import MEngine92Project from "../Projects/MEngine92Project";
 
 export default function Projects() {
 

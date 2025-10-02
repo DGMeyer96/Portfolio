@@ -1,26 +1,14 @@
 import { Chip, Container, Stack, Typography } from "@mui/material";
-import WorkHistory from "./WorkHistory";
+import WorkHistory from "../WorkHistory";
 
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import SchoolIcon from '@mui/icons-material/School';
-import { gray } from "../theme/themePrimitives";
 
 export default function Resume() {
 
     return (
-        <Stack direction="column" spacing={1} sx={{ width: '100%', maxHeight: '100%' }}>
-            <Stack 
-            direction='column' 
-            spacing={2} 
-            sx={[
-                { width: '100%', p: 1, },
-                // (theme) => ({
-                //     ...theme.applyStyles('dark', {
-                //         backgroundColor: gray[900],
-                //     }),
-                //     borderRadius: (theme.vars || theme).shape.borderRadius,
-                // })
-            ]}>
+        <Stack id="ResumeStack" direction="column" spacing={1} sx={{ width: '100%', maxHeight: '100%' }}>
+            <Stack direction='column' spacing={2} sx={{ width: '100%', p: 1, }}>
                 <Stack direction='row' spacing={2} >
                     <WorkOutlineIcon color='primary' sx={{ width: 48, height: 48 }} />
                     <Typography variant="h3" sx={{ pt: 1 }}>
@@ -128,18 +116,7 @@ export default function Resume() {
                 </Container>
             </Stack>
             {/* Education */}
-            <Stack 
-            direction='column' 
-            spacing={2} 
-            sx={[
-                { width: '100%', p: 1 },
-                // (theme) => ({
-                //     ...theme.applyStyles('dark', {
-                //         backgroundColor: gray[900],
-                //     }),
-                //     borderRadius: (theme.vars || theme).shape.borderRadius,
-                // })
-            ]}>
+            <Stack direction='column' spacing={2} sx={{ width: '100%', p: 1 }}>
                 <Stack direction='row' spacing={2} >
                     <SchoolIcon color='primary' sx={{ width: 48, height: 48 }} />
                     <Typography variant="h3" sx={{ pt: 1 }}>

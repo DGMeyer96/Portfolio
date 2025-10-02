@@ -1,8 +1,8 @@
 import { Card, Container, Grow } from '@mui/material';
+import { gray } from '../../theme/themePrimitives';
 import AboutMe from './AboutMe';
-import Projects from './Projects';
 import Resume from './Resume';
-import { gray } from '../theme/themePrimitives';
+import Projects from './Projects';
 
 export default function Content({
   activeContent,

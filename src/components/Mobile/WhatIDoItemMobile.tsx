@@ -12,7 +12,7 @@ export default function WhatIDoItemMobile({
     IconComponent: OverridableComponent<SvgIconTypeMap<{}, "svg">>,
     label: string, 
     text: string,
-    size: 'lg' | 'md' | 'sm',
+    size: 'lg' | 'md' | 'sm' | 'auto',
 }) {
 
     const getHeight = (size: string) => {
@@ -20,8 +20,10 @@ export default function WhatIDoItemMobile({
             return 200;
         } else if (size === 'md') {
             return 150;
-        } else {
+        } else if (size === 'sm') {
             return 100;
+        } else {
+            return "fit-content"
         }
     }
 

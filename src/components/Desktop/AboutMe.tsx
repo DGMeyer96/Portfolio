@@ -1,15 +1,15 @@
 import { Chip, Link, Paper, Stack, Typography } from "@mui/material";
-import WhatIDoItem from "./WhatIDoItem";
+import WhatIDoItem from "../WhatIDoItem";
 
-import Arduino from "../assets/arduino.svg";
-import AndroidStudio from "../assets/android-studio.svg";
-import Cpp from "../assets/cpp.svg";
-import CSharp from "../assets/csharp.svg";
-import OpenGL from "../assets/opengl.svg";
-import Python from "../assets/python.svg";
-import React from "../assets/react.svg";
-import Unity from "../assets/unity.svg";
-import Unreal from "../assets/unreal.svg";
+import Arduino from "../../assets/arduino.svg";
+import AndroidStudio from "../../assets/android-studio.svg";
+import Cpp from "../../assets/cpp.svg";
+import CSharp from "../../assets/csharp.svg";
+import OpenGL from "../../assets/opengl.svg";
+import Python from "../../assets/python.svg";
+import React from "../../assets/react.svg";
+import Unity from "../../assets/unity.svg";
+import Unreal from "../../assets/unreal.svg";
 
 import BuildIcon from '@mui/icons-material/Build';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';

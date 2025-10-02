@@ -1,9 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import { Card, Container, CssBaseline, Stack, styled, useMediaQuery, useTheme } from '@mui/material'
-import AppTheme from './theme/AppTheme'
-import ColorModeSelect from './theme/ColorModeSelect'
-import Sidebar from './components/Sidebar'
+import { Container, Stack, styled, useMediaQuery, useTheme } from '@mui/material'
+import Sidebar from './components/Desktop/Sidebar'
 import '@fontsource/roboto/100.css';
 import '@fontsource/roboto/200.css';
 import '@fontsource/roboto/300.css';
@@ -13,9 +11,8 @@ import '@fontsource/roboto/600.css';
 import '@fontsource/roboto/700.css';
 import '@fontsource/roboto/800.css';
 import '@fontsource/roboto/900.css';
-import Header from './components/Header'
-import Content from './components/Content'
-import { gray } from './theme/themePrimitives'
+import Header from './components/Desktop/Header'
+import Content from './components/Desktop/Content'
 import ContentMobile from './components/Mobile/ContentMobile'
 import FooterMobile from './components/Mobile/FooterMobile'
 
