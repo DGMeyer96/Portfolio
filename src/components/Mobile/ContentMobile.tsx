@@ -10,26 +10,15 @@ export default function ContentMobile({
   activeContent: string,
 }) {
   return (
-    <Card
+    <Card 
+        id="ContentMobileCard"
         sx={[
             {
-                // display: 'flex',
-                // justifyContent: 'center',
-                // alignItems: 'center',
                 borderRadius: 3,
-                maxWidth: '100%',
-                maxHeight: '90vh',
-                // height: '100%',
-                // p: 2,
-                // pt: 2,
+                width: '100%',
+                height: '100%',
                 boxShadow: 3,
                 border: 'none',
-                // bgcolor: 'primary.dark',
-                // '&:hover': {
-                //     bgcolor: 'primary.dark',
-                // },
-                // overflowX: 'hidden',
-                // overflowY: 'scroll'
             },
             (theme) => ({
                 ...theme.applyStyles('dark', {
@@ -39,9 +28,8 @@ export default function ContentMobile({
             })
         ]}
     >
-    {/* <Container sx={{ width: '100%', height: '100%', overflowY: 'scroll' }}> */}
         <Grow in={activeContent === 'about'} easing={{ enter: 'cubic-bezier(0, 1.5, .8, 1)', exit: 'linear' }} mountOnEnter unmountOnExit>
-            <Container sx={{ width: '100%', height: '100%', }}>
+            <Container sx={{ width: '100%', height: '100%', p:0 }}>
                 <AboutMeMobile/>
             </Container >
         </Grow>
@@ -55,7 +43,6 @@ export default function ContentMobile({
                 <ProjectsMobile/>
             </Container>
         </Grow> 
-    {/* </Container> */}
     </Card>
   );
 }
