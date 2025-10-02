@@ -11,14 +11,15 @@ export default function Content({
 }) {
   return (
     <Card
+        id='ContentCard'
         sx={[
             {
                 display: 'flex',
                 // justifyContent: 'center',
                 // alignItems: 'center',
                 borderRadius: 3,
-                width: '100%',
-                height: '75vh',
+                // width: '100%',
+                // height: '75vh',
                 p: 0,
                 pt: 2,
                 boxShadow: 3,

@@ -27,8 +27,9 @@ function App() {
     const StyledBox = styled('div')(({ theme }) => ({
         alignSelf: 'center',
         width: '100%',
-        // height: '100%',
-        // marginTop: theme.spacing(8),
+        maxWidth: '100%',
+        minHeight: '85%',
+        maxHeight: '85%',
         borderRadius: (theme.vars || theme).shape.borderRadius,
         outline: '6px solid',
         outlineColor: '#bfc8d933',
@@ -74,143 +75,40 @@ function App() {
         }),
     }));
 
-    function body() {
-        if(isMobile === true) {
-            return (
-                // <Stack
-                //     direction="column"
-                //     component="main"
-                //     sx={[
-                //     {
-                //         justifyContent: 'center',
-                //         height: 'calc((var(--template-frame-height, 0)) * 100%)',
-                //         // marginTop: 'max(var(--template-frame-height, 0px), 0px)',
-                //         minHeight: '100%',
-                //         // maxWidth: '1100px',
-                //     },
-                //     (theme) => ({
-                //         '&::before': {
-                //             content: '""',
-                //             display: 'block',
-                //             position: 'absolute',
-                //             zIndex: -1,
-                //             inset: 0,
-                //             backgroundImage:
-                //                 'radial-gradient(ellipse at 50% 50%, hsl(210, 100%, 97%), hsl(0, 0%, 100%))',
-                //             backgroundRepeat: 'no-repeat',
-                //             ...theme.applyStyles('dark', {
-                //                 backgroundImage:
-                //                 'radial-gradient(at 50% 50%, hsla(210, 100%, 16%, 0.5), hsl(220, 30%, 5%))',
-                //             }),
-                //         },
-                //     }),
-                //     ]}
-                // >
-                <Container id='AppMobileContainer' fixed sx={{ p: 0, width: '100vw', height: '100vh' }}>
-                    <Stack direction='column' spacing={0} sx={{ maxHeight: '100%', justifyContent: "space-between", alignItems: "center", }}>
-                        <StyledBoxMobile id="StyleBoxMobile">
-                            <ContentMobile activeContent={activeContent}/>
-                        </StyledBoxMobile>
-                        <FooterMobile setActiveContent={setActiveContent} activeContent={activeContent}/>
-                    </Stack>
-                </Container>
-                // </Stack>
-            );
-        } else {
-            return (
-                <Stack
-                    direction="column"
-                    component="main"
-                    sx={[
-                        {
-                            display: 'flex',
-                            justifyContent: 'center',
-                            height: 'calc((var(--template-frame-height, 0)) * 100%)',
-                            // marginTop: 'max(var(--template-frame-height, 0px), 0px)',
-                            maxHeight: '85vh',
-                            maxWidth: '45vw',
-                            m: 'auto'
-                        },
-                        (theme) => ({
-                            '&::before': {
-                                content: '""',
-                                display: 'block',
-                                position: 'absolute',
-                                zIndex: -1,
-                                inset: 0,
-                                backgroundImage:
-                                    'radial-gradient(ellipse at 50% 50%, hsl(210, 100%, 97%), hsl(0, 0%, 100%))',
-                                backgroundRepeat: 'no-repeat',
-                                ...theme.applyStyles('dark', {
-                                    backgroundImage:
-                                    'radial-gradient(at 50% 50%, hsla(210, 100%, 16%, 0.5), hsl(220, 30%, 5%))',
-                                }),
-                            },
-                        }),
-                    ]}
-                >
-                    <StyledBox>
-                        <Stack
-                            direction={{ xs: 'column-reverse', md: 'row' }}
-                            sx={[
-                                {
-                                    justifyContent: 'center',
-                                    gap: { xs: 3, sm: 6 },
-                                    p: 2,
-                                    mx: 'auto',
-                                },
-                                (theme) => ({
-                                    // backgroundColor: gray[50],
-                                    ...theme.applyStyles('dark', {
-                                        backgroundColor: gray[800],
-                                    }),
-                                    borderRadius: (theme.vars || theme).shape.borderRadius,
-                                })
-                            ]}
-                        >
-                            <Sidebar/>
-                            <Card
-                                sx={{
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    borderRadius: 3,
-                                    width: '100%',
-                                    height: '100%',
-                                    p: 3,
-                                    boxShadow: 3,
-                                    border: 'none',
-                                    // bgcolor: 'primary.dark',
-                                    // '&:hover': {
-                                    //     bgcolor: 'primary.dark',
-                                    // },
-                                }}
-                            >
-                            <Stack 
-                                direction="column" 
-                                spacing={1} 
-                                sx={{ 
-                                    width: '100%', 
-                                    height: '100%' ,
-                                    display: 'flex',
-                                    justifyContent: 'right',
-                                    alignItems: 'center',
-                                }}
-                            >
-                                <Header activeContent={activeContent} setActiveContent={setActiveContent} />
-                                <Content activeContent={activeContent} />
-                            </Stack>
-                            </Card>
+    function bodyDesktop() {
+        return (
+            <Container id='AppContainer' fixed sx={{ display: 'flex', justifyContent: 'center', m: 'auto' }}>
+                <StyledBox id="AppStyledBox">
+                    <Stack id='AppStackRow' direction='row' spacing={2}>
+                        <Sidebar/>
+                        <Stack id='AppStackColumn' direction="column" spacing={1} sx={{ p:3, overflow: 'hidden' }}>
+                            <Header activeContent={activeContent} setActiveContent={setActiveContent} />
+                            <Content activeContent={activeContent} />
                         </Stack>
-                    </StyledBox>
-                </Stack>
-            );
-        }
+                    </Stack>
+                </StyledBox>
+            </Container>
+        );
     }
 
-    return (
-        body()
-    );
+    function bodyMobile() {
+        return (
+            <Container id='AppMobileContainer' fixed sx={{ p: 0, width: '100vw', height: '100vh' }}>
+                <Stack direction='column' spacing={0} sx={{ maxHeight: '100%', justifyContent: "space-between", alignItems: "center", }}>
+                    <StyledBoxMobile id="StyleBoxMobile">
+                        <ContentMobile activeContent={activeContent}/>
+                    </StyledBoxMobile>
+                    <FooterMobile setActiveContent={setActiveContent} activeContent={activeContent}/>
+                </Stack>
+            </Container>
+        );
+    }
+
+    if(isMobile === true) {
+        return bodyMobile();
+    } else {
+        return bodyDesktop();
+    }
 }
 
 export default App

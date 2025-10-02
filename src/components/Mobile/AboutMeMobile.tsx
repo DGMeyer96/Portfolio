@@ -1,15 +1,4 @@
-import { Stack, Typography, Chip, Link, Paper } from "@mui/material";
-import WhatIDoItem from "../WhatIDoItem";
-
-// import Arduino from "../../assets/arduino.svg";
-// import AndroidStudio from "../../assets/android-studio.svg";
-// import Cpp from "../../assets/cpp.svg";
-// import CSharp from "../../assets/csharp.svg";
-// import OpenGL from "../../assets/opengl.svg";
-// import Python from "../../assets/python.svg";
-// import React from "../../assets/react.svg";
-// import Unity from "../../assets/unity.svg";
-// import Unreal from "../../assets/unreal.svg";
+import { Stack, Typography, Chip } from "@mui/material";
 
 import BuildIcon from '@mui/icons-material/Build';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
@@ -83,29 +72,6 @@ export default function AboutMeMobile() {
                 </Stack>
                 <Chip color="primary" size="small" sx={{ width: '10%', height: 8 }} />
                 <Stack direction='row' spacing={3} sx={{ width: '100%', overflowX: 'scroll', pb: 2, px: 1 }}>
-                {/* {
-                    skillsSVGs.map((skill, index) => (
-                        <Link 
-                            key={index} 
-                            href={skill.url} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                        >
-                            <Paper 
-                            elevation={5} 
-                            sx={[
-                                { p:2, display: 'flex', justifyContent: 'center', alignItems: 'start' },
-                                // (theme) => ({
-                                //     ...theme.applyStyles('dark', {
-                                //         backgroundColor: gray[900],
-                                //     }),
-                                // })
-                            ]}>
-                                <img src={skill.image} style={{ width: 100, height: 100 }}/> 
-                            </Paper>
-                        </Link>
-                    ))
-                } */}
                 </Stack>
             </Stack>
         </Stack>

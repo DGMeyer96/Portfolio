@@ -8,7 +8,7 @@ import { gray } from "../theme/themePrimitives";
 export default function Resume() {
 
     return (
-        <Stack direction="column" spacing={1} sx={{ width: '100%', maxHeight: '75vh' }}>
+        <Stack direction="column" spacing={1} sx={{ width: '100%', maxHeight: '100%' }}>
             <Stack 
             direction='column' 
             spacing={2} 
