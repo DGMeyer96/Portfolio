@@ -1,4 +1,4 @@
-import { Typography, Grow, Chip, Stack, IconButton, ImageList, ImageListItem, Card, useTheme, useMediaQuery } from "@mui/material";
+import { Typography, Grow, Chip, Stack, IconButton, ImageList, ImageListItem } from "@mui/material";
 import { type Dispatch, type ReactNode, type SetStateAction } from "react";
 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';

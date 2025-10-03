@@ -62,13 +62,11 @@ export default function AboutMe() {
                             IconComponent={ElectricCarIcon} 
                             label="Embedded Systems" 
                             text="I have experience developing software for embedded systems where resources are precious and limited. These include for Automotive and Low Power (i.e. RPi/ESP32) applications." 
-                            size="lg" 
                         />
                         <WhatIDoItem 
                             IconComponent={AutoAwesomeMotionIcon} 
                             label="Threading" 
                             text="I specialize in improving software performance via asynchronous and multi-threaded systems design." 
-                            size="md" 
                         />
                     </Stack>
                     <Stack direction='column' spacing={2} sx={{ width: '100%', pb: 2 }}>
@@ -76,13 +74,11 @@ export default function AboutMe() {
                             IconComponent={BuildIcon} 
                             label="Development Tools" 
                             text="More and more features are being requested but the number of developers remains the same. We need to improve the performance of not only the application but those who create it as well." 
-                            size="lg" 
                         />
                         <WhatIDoItem 
                             IconComponent={QueryStatsIcon} 
                             label="Data Analysis" 
                             text="Data is more important than ever whether it be for measuring application health and performance or finding trends." 
-                            size="md" 
                         />
                     </Stack>
                 </Stack>

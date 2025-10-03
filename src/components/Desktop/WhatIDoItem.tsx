@@ -7,23 +7,11 @@ export default function WhatIDoItem({
     IconComponent,
     label,
     text,
-    size,
 } : {
     IconComponent: OverridableComponent<SvgIconTypeMap<{}, "svg">>,
     label: string, 
     text: string,
-    size: 'lg' | 'md' | 'sm',
 }) {
-
-    const getHeight = (size: string) => {
-        if(size === 'lg') {
-            return 200;
-        } else if (size === 'md') {
-            return 150;
-        } else {
-            return 100;
-        }
-    }
 
     return (
         <Paper elevation={5} sx={[

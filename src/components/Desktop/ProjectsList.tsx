@@ -1,4 +1,4 @@
-import { Card, Chip, IconButton, ImageList, ImageListItem, ImageListItemBar, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Chip, IconButton, ImageList, ImageListItem, ImageListItemBar, Stack, Typography } from "@mui/material";
 
 import Flightcase from '../../assets/projects/flightcase/logo2.png';
 import Fisker from '../../assets/projects/fisker/ocean_blue.webp';
