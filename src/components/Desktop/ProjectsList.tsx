@@ -1,4 +1,4 @@
-import { Chip, IconButton, ImageList, ImageListItem, ImageListItemBar, Stack, Typography } from "@mui/material";
+import { Card, Chip, IconButton, ImageList, ImageListItem, ImageListItemBar, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 
 import Flightcase from '../../assets/projects/flightcase/logo2.png';
 import Fisker from '../../assets/projects/fisker/ocean_blue.webp';
@@ -61,7 +61,7 @@ export default function ProjectsList({
     ];
 
     return (
-        <Stack direction="column" spacing={4}>
+        <Stack id="ProjectsList" direction="column" spacing={4} sx={{ pb: 2 }}>
             <Stack direction="column" spacing={2}>
                 <Stack direction="row">
                     <Typography variant="h3">
@@ -75,8 +75,8 @@ export default function ProjectsList({
                 projectList.map((item, index) => (
                     <ImageListItem key={`${item.img}-${index}`}>
                         <img
-                            srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                            src={`${item.img}?w=248&fit=crop&auto=format`}
+                            srcSet={item.img}
+                            src={item.img}
                             alt={item.title}
                             loading="lazy"
                         />

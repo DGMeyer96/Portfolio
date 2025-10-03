@@ -1,9 +1,10 @@
-import { BottomNavigation, BottomNavigationAction, Box } from "@mui/material";
+import { BottomNavigation, BottomNavigationAction, Box, Card } from "@mui/material";
 import type { Dispatch } from "react";
 
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ArticleIcon from '@mui/icons-material/Article';
 import InventoryIcon from '@mui/icons-material/Inventory';
+import { gray } from "../../theme/themePrimitives";
 
 export default function FooterMobile({ 
     activeContent, 
@@ -13,16 +14,35 @@ export default function FooterMobile({
     setActiveContent: Dispatch<React.SetStateAction<string>>
 }) {
     return (
-        <Box sx={{ width: '100vw' }}>
+        // <Box sx={{ width: '100vw' }}>
+        //     <BottomNavigation
+        //         showLabels
+        //         value={activeContent}
+        //         onChange={(_, newValue) => { setActiveContent(newValue) }}
+        //     >
+        //         <BottomNavigationAction label="About" value="about" icon={<AccountCircleIcon />} />
+        //         <BottomNavigationAction label="Resume" value="resume" icon={<ArticleIcon />} />
+        //         <BottomNavigationAction label="Projects" value="projects" icon={<InventoryIcon />} />
+        //     </BottomNavigation>
+        // </Box>
+        <Card sx={{ width: '100vw' }}>
             <BottomNavigation
                 showLabels
                 value={activeContent}
                 onChange={(_, newValue) => { setActiveContent(newValue) }}
+                sx={[
+                    {},
+                    (theme) => ({
+                        ...theme.applyStyles('dark', {
+                            backgroundColor: gray[900],
+                        }),
+                    })
+                ]}
             >
                 <BottomNavigationAction label="About" value="about" icon={<AccountCircleIcon />} />
                 <BottomNavigationAction label="Resume" value="resume" icon={<ArticleIcon />} />
                 <BottomNavigationAction label="Projects" value="projects" icon={<InventoryIcon />} />
             </BottomNavigation>
-        </Box>
+        </Card>
     );
 }
