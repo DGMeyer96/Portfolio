@@ -1,7 +1,7 @@
 import type { SvgIconTypeMap } from "@mui/material";
 import { Stack, Paper, Typography } from "@mui/material";
 import type { OverridableComponent } from "@mui/material/OverridableComponent";
-import { gray } from "../theme/themePrimitives";
+import { gray } from "../../theme/themePrimitives";
 
 export default function WhatIDoItem({
     IconComponent,

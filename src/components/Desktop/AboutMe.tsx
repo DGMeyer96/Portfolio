@@ -1,5 +1,5 @@
 import { Chip, Link, Paper, Stack, Typography } from "@mui/material";
-import WhatIDoItem from "../WhatIDoItem";
+import WhatIDoItem from "./WhatIDoItem";
 
 import Arduino from "../../assets/arduino.svg";
 import AndroidStudio from "../../assets/android-studio.svg";

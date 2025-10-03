@@ -1,5 +1,5 @@
 import { Chip, Container, Stack, Typography } from "@mui/material";
-import WorkHistory from "../WorkHistory";
+import WorkHistory from "./WorkHistory";
 
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import SchoolIcon from '@mui/icons-material/School';
