@@ -1,4 +1,4 @@
-import { BottomNavigation, BottomNavigationAction, Box, Card } from "@mui/material";
+import { BottomNavigation, BottomNavigationAction, Card } from "@mui/material";
 import type { Dispatch } from "react";
 
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';

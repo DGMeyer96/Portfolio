@@ -1,4 +1,4 @@
-import { Card, Paper, Tab, Tabs } from "@mui/material";
+import { Card, Tab, Tabs } from "@mui/material";
 import { type Dispatch } from "react";
 import { gray } from "../../theme/themePrimitives";
 
