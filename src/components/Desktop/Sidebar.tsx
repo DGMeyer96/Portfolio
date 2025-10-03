@@ -7,6 +7,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import IconWith2Text from '../IconWith2Text';
 
+import Headshot from '../../assets/daniel_headshot-3.jpg';
+
 export default function Sidebar() {
 
     return (
@@ -27,7 +29,7 @@ export default function Sidebar() {
             }}
         >
             <Stack direction='column' spacing={3} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <Avatar alt="Daniel Meyer" src="/static/images/daniel_headshot-3.jpg" variant='rounded' sx={{ minWidth: 256, minHeight: 256 }} />
+                <Avatar alt="Daniel Meyer" src={Headshot} variant='rounded' sx={{ minWidth: 256, minHeight: 256 }} />
                 <Stack direction='column' spacing={1} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     <Typography
                         component="h1"
