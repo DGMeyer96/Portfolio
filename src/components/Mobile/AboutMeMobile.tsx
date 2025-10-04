@@ -10,7 +10,7 @@ import React from "../../assets/react.svg";
 import Unity from "../../assets/unity.svg";
 import Unreal from "../../assets/unreal.svg";
 
-import Headshot from '../../assets/daniel_headshot-3.jpg';
+import Headshot from '../../assets/daniel_headshot_small.jpg';
 
 import BuildIcon from '@mui/icons-material/Build';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';

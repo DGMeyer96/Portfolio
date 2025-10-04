@@ -7,7 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import IconWith2Text from '../IconWith2Text';
 
-import Headshot from '../../assets/daniel_headshot-3.jpg';
+import Headshot from '../../assets/daniel_headshot_small.jpg';
 
 export default function Sidebar() {
 
