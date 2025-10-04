@@ -82,7 +82,7 @@ function App() {
 
     function bodyMobile() {
         return (
-            <Container id='AppMobileContainer' fixed sx={{ p: 0, width: '100dvw', height: '100dvh' }}>
+            <Container id='AppMobileContainer' fixed sx={{ p: 0, width: '100dvw', height: '100dvh', overflow: 'hidden'  }}>
                 <StyledBoxMobile id="StyleBoxMobile">
                     <Stack direction='column' spacing={0} sx={{ height: '100dvh', justifyContent: "space-between", alignItems: "center", overflow: 'hidden' }}>
                         <ContentMobile activeContent={activeContent}/>
