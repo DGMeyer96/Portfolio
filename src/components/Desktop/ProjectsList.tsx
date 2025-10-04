@@ -2,8 +2,8 @@ import { Chip, IconButton, ImageList, ImageListItem, ImageListItemBar, Stack, Ty
 
 import Flightcase from '../../assets/projects/flightcase/logo2.png';
 import Fisker from '../../assets/projects/fisker/ocean_blue.webp';
-import Arduino from '../../assets/projects/arduino_can_bus/arduino-2.png';
-import CSUSB from '../../assets/projects/csusb.png';
+import Arduino from '../../assets/projects/arduino_can_bus/arduino.png';
+import CSUSB from '../../assets/projects/csusb-ati-logo.png';
 import CompanionSpecies from '../../assets/projects/companion_species/Green-Science-Games-Learning-games.webp';
 import MEngine92 from '../../assets/projects/mengine92/mengine92-1.png';
 import InfoIcon from '@mui/icons-material/Info';

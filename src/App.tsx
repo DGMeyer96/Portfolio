@@ -68,8 +68,10 @@ function App() {
         return (
             <Container id='AppContainer' fixed sx={{ display: 'flex', justifyContent: 'center', m: 'auto' }}>
                 <StyledBox id="AppStyledBox">
-                    <Stack id='AppStackRow' direction='row' spacing={2}>
-                        <Sidebar/>
+                    <Stack id='AppStackRow' direction='row' spacing={0}>
+                        <Container sx={{ py:3, pr:0, width: 'fit-content', height: 'fit-content', }}>
+                            <Sidebar/>
+                        </Container>
                         <Stack id='AppStackColumn' direction="column" spacing={1} sx={{ p:3, overflow: 'hidden' }}>
                             <Header activeContent={activeContent} setActiveContent={setActiveContent} />
                             <Content activeContent={activeContent} />
@@ -83,7 +85,6 @@ function App() {
     function bodyMobile() {
         return (
             <Container id='AppMobileContainer' fixed sx={{ p:0, width: '100dvw', height: '100dvh', overflow: 'hidden', display: 'flex', justifyContent: "center", alignItems: "center", }}>
-             {/* <Container id='AppMobileContainer' fixed sx={{ p:0, width: '100dvw', height: '100dvh', overflow: 'hidden', }}> */}
                 <StyledBoxMobile id="StyleBoxMobile">
                     <Stack direction='column' spacing={0} sx={{ height: '100%', justifyContent: "space-between", alignItems: "center", overflow: 'hidden' }}>
                         <FooterMobile setActiveContent={setActiveContent} activeContent={activeContent}/>

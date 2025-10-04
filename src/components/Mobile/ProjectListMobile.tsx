@@ -1,12 +1,11 @@
-import { Card, Chip, IconButton, ImageList, ImageListItem, ImageListItemBar, Stack, Typography } from "@mui/material";
+import { Card, Chip, ImageList, ImageListItem, ImageListItemBar, Stack, Typography } from "@mui/material";
 
 import Flightcase from '../../assets/projects/flightcase/logo2.png';
 import Fisker from '../../assets/projects/fisker/ocean_blue.webp';
-import Arduino from '../../assets/projects/arduino_can_bus/arduino-2.png';
-import CSUSB from '../../assets/projects/csusb.png';
+import Arduino from '../../assets/projects/arduino_can_bus/arduino.png';
+import CSUSB from '../../assets/projects/csusb-ati-logo.png';
 import CompanionSpecies from '../../assets/projects/companion_species/Green-Science-Games-Learning-games.webp';
 import MEngine92 from '../../assets/projects/mengine92/mengine92-1.png';
-import InfoIcon from '@mui/icons-material/Info';
 
 export default function ProjectsListMobile({
     onClick,
@@ -74,27 +73,24 @@ export default function ProjectsListMobile({
                 <ImageList variant="masonry" cols={2} gap={8}>
                 {
                     projectList.map((item, index) => (
-                        <ImageListItem key={`${item.img}-${index}`}>
+                        <ImageListItem key={`${item.img}-${index}`} onClick={() => onClick(item.title)}>
                             <img
-                                srcSet={`${item.img}`}
-                                src={`${item.img}`}
-                                // srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                                // src={`${item.img}?w=248&fit=crop&auto=format`}
+                                srcSet={item.img}
+                                src={item.img}
                                 alt={item.title}
                                 loading="lazy"
                             />
                             <ImageListItemBar
                                 sx={{ pr: 1 }}
-                                title={item.title}
-                                subtitle={item.company}
-                                actionIcon={
-                                    <IconButton
-                                        sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                                        aria-label={`info about ${item.title}`}
-                                        onClick={() => onClick(item.title) }
-                                    >
-                                        <InfoIcon />
-                                    </IconButton>
+                                title={
+                                    <Typography sx={{ fontWeight: 400, textAlign: 'center' }}>
+                                        {item.title}
+                                    </Typography>
+                                }
+                                subtitle={
+                                    <Typography  sx={{ fontWeight: 200, textAlign: 'center' }}>
+                                        {item.company}
+                                    </Typography>
                                 }
                             />
                         </ImageListItem>

@@ -10,7 +10,9 @@ import Flightcase3 from '../../assets/projects/flightcase/digital_cockpit.png';
 import Flightcase4 from '../../assets/projects/flightcase/e2e_toolchain.png';
 import Flightcase5 from '../../assets/projects/flightcase/ecosystem.png';
 // Arduino Images
-import Arduino1 from '../../assets/projects/arduino_can_bus/arduino-2.png';
+import Arduino1 from '../../assets/projects/arduino_can_bus/arduino-can-bus-1.jpg';
+import Arduino2 from '../../assets/projects/arduino_can_bus/arduino-can-bus-3.jpg';
+import Arduino3 from '../../assets/projects/arduino_can_bus/arduino-can-bus-4.jpg';
 // MEngine Images
 import MEngine1 from '../../assets/projects/mengine92/mengine92-1.png';
 import MEngine2 from '../../assets/projects/mengine92/mengine92-2.png';
@@ -45,7 +47,7 @@ export default function Projects() {
     const [ activeModal, setActiveModal ] = useState('None');
 
     const flightcaseImages = [ Flightcase1, Flightcase2, Flightcase3, Flightcase4, Flightcase5 ];
-    const arduinoCANImages = [ Arduino1, ];
+    const arduinoCANImages = [ Arduino1, Arduino2, Arduino3 ];
     const mEngine92Images = [ MEngine1, MEngine2, MEngine3 ];
     const fiskerOceanImages = [ Fisker1, Fisker2, Fisker3, Fisker4, Fisker5, Fisker6, Fisker7, Fisker8, Fisker9 ];
     const companionSpeciesImages = [ CompanionSpecies1, CompanionSpecies2, CompanionSpecies3, CompanionSpecies4, CompanionSpecies5 ];
