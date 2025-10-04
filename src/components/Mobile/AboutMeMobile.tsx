@@ -10,6 +10,7 @@ import React from "../../assets/react.svg";
 import Unity from "../../assets/unity.svg";
 import Unreal from "../../assets/unreal.svg";
 
+import Headshot from '../../assets/daniel_headshot-3.jpg';
 
 import BuildIcon from '@mui/icons-material/Build';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
@@ -33,9 +34,9 @@ export default function AboutMeMobile() {
 
     return (
         <Stack id='AboutMeMobile' direction="column" spacing={2} sx={{ width: '100%', height: '100%' }}>
-            <Card>
-                <Stack direction="row" sx={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'center' }}>
-                    <Avatar alt="Daniel Meyer" src="/static/images/daniel_headshot-3.jpg" variant='rounded' />
+            <Card sx={{ height: 'fit-content' }}>
+                <Stack direction="row" sx={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', pb:1 }}>
+                    <Avatar alt="Daniel Meyer" src={Headshot} variant='rounded' sx={{ width: 56, height: 56 }} />
                     <Stack direction='column' spacing={1} sx={{ display: 'flex', justifyContent: 'left', alignItems: 'center' }}>
                         <Typography
                             component="h1"
