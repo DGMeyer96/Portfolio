@@ -1,4 +1,3 @@
-import { useMediaQuery } from '@mui/material';
 import { createTheme, alpha, type PaletteMode, type Shadows } from '@mui/material/styles';
 
 declare module '@mui/material/Paper' {
