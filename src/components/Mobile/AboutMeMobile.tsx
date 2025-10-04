@@ -51,13 +51,13 @@ export default function AboutMeMobile() {
             </Card>
             <Card sx={{ height: '100%', overflowY: 'scroll', overflowX: 'hidden' }}>
                 <Stack direction="column" spacing={2}>
-                    <Stack direction="column" spacing={2}>
+                    <Stack direction="column" spacing={1}>
                         <Stack direction="row">
                             <Typography variant="h3">
                                 A little bit about me...
                             </Typography>
                         </Stack>
-                        <Chip color="primary" size="small" sx={{ width: '10%', height: 8 }} />
+                        <Chip color="primary" size="small" sx={{ width: 40, height: 8 }} />
                         <Typography variant="body1">
                             My name is Daniel Meyer and I am a Full Stack Software Engineer 
                             born and raised in Southern California.My career has led me to a 
@@ -68,13 +68,13 @@ export default function AboutMeMobile() {
                             whether it be hardware or software.
                         </Typography>
                     </Stack>
-                    <Stack direction="column" spacing={2}>
+                    <Stack direction="column" spacing={1}>
                         <Stack direction="row">
                             <Typography variant="h3">
                                 What I do
                             </Typography>
                         </Stack>
-                        <Chip color="primary" size="small" sx={{ width: '10%', height: 8 }} />
+                        <Chip color="primary" size="small" sx={{ width: 40, height: 8 }} />
                         <Stack direction='column' spacing={2} sx={{ pb: 2 }}>
                             <WhatIDoItemMobile 
                                 IconComponent={ElectricCarIcon} 
@@ -102,13 +102,13 @@ export default function AboutMeMobile() {
                             />
                         </Stack>
                     </Stack>
-                    <Stack direction="column" spacing={2}>
+                    <Stack direction="column" spacing={1}>
                         <Stack direction="row">
                             <Typography variant="h3">
                                 Skills
                             </Typography>
                         </Stack>
-                        <Chip color="primary" size="small" sx={{ width: '10%', height: 8 }} />
+                        <Chip color="primary" size="small" sx={{ width: 40, height: 8 }} />
                         <Stack direction='row' spacing={3} sx={{ width: '100%', overflowX: 'scroll', pb: 2, px: 1 }}>
                         {
                             skillsSVGs.map((skill, index) => (

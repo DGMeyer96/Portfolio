@@ -9,14 +9,14 @@ export default function ResumeMobile() {
         <Stack id='ResumeMobile' direction="column" spacing={2} sx={{ width: '100%', height: '100%' }}>
             {/* Work History */}
             <Card id="WorkHistoryCard">
-                <Stack direction='column' spacing={2} sx={{ p: 1, height: '100%' }}>
+                <Stack direction='column' spacing={1} sx={{ p: 1 }}>
                     <Stack direction='row' spacing={2} >
-                        <WorkOutlineIcon color='primary' sx={{ width: 48, height: 48 }} />
+                        <WorkOutlineIcon color='primary' sx={{ width: 40, height: 40 }} />
                         <Typography variant="h3" sx={{ pt: 1 }}>
                             Work History
                         </Typography>
                     </Stack>
-                    <Chip color="primary" size="small" sx={{ width: '10%', height: 8 }} />
+                    <Chip color="primary" size="small" sx={{ width: 40, height: 8 }} />
                     <Container sx={{ width: '100%', maxHeight: '40vh', overflowY: 'scroll', pl:0 }}>
                         <WorkHistoryMobile 
                             timeWorked={"Feb. 2025 - Present"}
@@ -119,14 +119,14 @@ export default function ResumeMobile() {
             </Card>
             {/* Education */}
             <Card id="EducationCard">
-                <Stack direction='column' spacing={2} sx={{ p: 1, height: '100%' }}>
+                <Stack direction='column' spacing={1} sx={{ p: 1 }}>
                     <Stack direction='row' spacing={2} >
-                        <SchoolIcon color='primary' sx={{ width: 48, height: 48 }} />
+                        <SchoolIcon color='primary' sx={{ width: 40, height: 40 }} />
                         <Typography variant="h3" sx={{ pt: 1 }}>
                             Education
                         </Typography>
                     </Stack>
-                    <Chip color="primary" size="small" sx={{ width: '10%', height: 8 }} />
+                    <Chip color="primary" size="small" sx={{ width: 40, height: 8 }} />
                     <Container sx={{ width: '100%', maxHeight: '20vh', overflowY: 'scroll', pl:0 }}>
                         {/* <hr></hr> */}
                         <Typography variant="h4">

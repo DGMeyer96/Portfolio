@@ -63,13 +63,13 @@ export default function ProjectsListMobile({
     return (
         <Card id="ProjectsListMobile">
             <Stack direction="column" spacing={4}>
-                <Stack direction="column" spacing={2}>
+                <Stack direction="column" spacing={1}>
                     <Stack direction="row">
                         <Typography variant="h3">
                             Projects
                         </Typography>
                     </Stack>
-                    <Chip color="primary" size="small" sx={{ width: '10%', height: 8 }} />
+                    <Chip color="primary" size="small" sx={{ width: 40, height: 8 }} />
                 </Stack>
                 <ImageList variant="masonry" cols={2} gap={8}>
                 {
