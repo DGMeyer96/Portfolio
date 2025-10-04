@@ -1,3 +1,4 @@
+import { useMediaQuery } from '@mui/material';
 import { createTheme, alpha, type PaletteMode, type Shadows } from '@mui/material/styles';
 
 declare module '@mui/material/Paper' {
@@ -27,6 +28,7 @@ declare module '@mui/material/styles' {
 }
 
 const defaultTheme = createTheme();
+const { breakpoints } = defaultTheme;
 
 const customShadows: Shadows = [...defaultTheme.shadows];
 
@@ -398,58 +400,91 @@ export const typography = {
     fontWeight: 600,
     lineHeight: 1.2,
     letterSpacing: -0.5,
+    [ breakpoints.down("md") ]: {
+      fontSize: defaultTheme.typography.pxToRem(36)
+    }
   },
   h2: {
     fontSize: defaultTheme.typography.pxToRem(36),
     fontWeight: 600,
     lineHeight: 1.2,
+    [ breakpoints.down("md") ]: {
+      fontSize: defaultTheme.typography.pxToRem(30)
+    }
   },
   h3: {
     fontSize: defaultTheme.typography.pxToRem(30),
     lineHeight: 1.2,
     color: primary[500],
+    [ breakpoints.down("md") ]: {
+      fontSize: defaultTheme.typography.pxToRem(24)
+    }
   },
   h4: {
     fontSize: defaultTheme.typography.pxToRem(24),
     fontWeight: 600,
     textAlign: 'left' as const,
+    [ breakpoints.down("md") ]: {
+      fontSize: defaultTheme.typography.pxToRem(20)
+    }
   },
   h5: {
     fontSize: defaultTheme.typography.pxToRem(20),
     fontWeight: 400,
     textAlign: 'left' as const,
     color: primary[500],
+    [ breakpoints.down("md") ]: {
+      fontSize: defaultTheme.typography.pxToRem(18)
+    }
   },
   h6: {
     fontSize: defaultTheme.typography.pxToRem(18),
     fontWeight: 200,
     color: secondary[500],
     textAlign: 'left' as const,
+    [ breakpoints.down("md") ]: {
+      fontSize: defaultTheme.typography.pxToRem(14)
+    }
   },
   subtitle1: {
     fontSize: defaultTheme.typography.pxToRem(18),
     fontWeight: 300,
     color: primary[500],
     textAlign: 'left' as const,
+    [ breakpoints.down("md") ]: {
+      fontSize: defaultTheme.typography.pxToRem(14)
+    }
   },
   subtitle2: {
     fontSize: defaultTheme.typography.pxToRem(14),
     fontWeight: 600,
     color: secondary[500],
     textAlign: 'left' as const,
+    [ breakpoints.down("md") ]: {
+      fontSize: defaultTheme.typography.pxToRem(12)
+    }
   },
   body1: {
     fontSize: defaultTheme.typography.pxToRem(14),
     fontWeight: 300,
     textAlign: 'left' as const,
+    [ breakpoints.down("md") ]: {
+      fontSize: defaultTheme.typography.pxToRem(12)
+    }
   },
   body2: {
     fontSize: defaultTheme.typography.pxToRem(14),
     fontWeight: 400,
+    [ breakpoints.down("md") ]: {
+      fontSize: defaultTheme.typography.pxToRem(12)
+    }
   },
   caption: {
     fontSize: defaultTheme.typography.pxToRem(12),
     fontWeight: 400,
+    [ breakpoints.down("md") ]: {
+      fontSize: defaultTheme.typography.pxToRem(10)
+    }
   },
 };
 
