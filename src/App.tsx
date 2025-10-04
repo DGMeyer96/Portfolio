@@ -47,8 +47,8 @@ function App() {
 
     const StyledBoxMobile = styled('div')(({ theme }) => ({
         alignSelf: 'center',
-        width: '100%',
-        height: '100%',
+        width: '90%',
+        height: '95%',
         overflow: 'hidden',
         borderRadius: (theme.vars || theme).shape.borderRadius,
         outline: '6px solid',
@@ -82,13 +82,14 @@ function App() {
 
     function bodyMobile() {
         return (
-            <Container id='AppMobileContainer' fixed sx={{ p:0, width: '100dvw', height: '100dvh', overflow: 'hidden' }}>
-                {/* <StyledBoxMobile id="StyleBoxMobile"> */}
+            <Container id='AppMobileContainer' fixed sx={{ p:0, width: '100dvw', height: '100dvh', overflow: 'hidden', display: 'flex', justifyContent: "center", alignItems: "center", }}>
+             {/* <Container id='AppMobileContainer' fixed sx={{ p:0, width: '100dvw', height: '100dvh', overflow: 'hidden', }}> */}
+                <StyledBoxMobile id="StyleBoxMobile">
                     <Stack direction='column' spacing={0} sx={{ height: '100%', justifyContent: "space-between", alignItems: "center", overflow: 'hidden' }}>
                         <FooterMobile setActiveContent={setActiveContent} activeContent={activeContent}/>
                         <ContentMobile activeContent={activeContent}/>
                     </Stack>
-                {/* </StyledBoxMobile> */}
+                </StyledBoxMobile>
             </Container>
         );
     }
