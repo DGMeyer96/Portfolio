@@ -57,7 +57,7 @@ export default function AboutMe() {
                 </Stack>
                 <Chip color="primary" size="small" sx={{ width: '10%', height: 8 }} />
                 <Stack direction='row' spacing={2} sx={{ width: '100%', pb: 2 }}>
-                    <Stack direction='column' spacing={2} sx={{ width: '100%', pb: 2 }}>
+                    <Stack direction='column' spacing={2} sx={{ width: '100%', pb:2, px:1 }}>
                         <WhatIDoItem 
                             IconComponent={ElectricCarIcon} 
                             label="Embedded Systems" 
@@ -69,7 +69,7 @@ export default function AboutMe() {
                             text="I specialize in improving software performance via asynchronous and multi-threaded systems design." 
                         />
                     </Stack>
-                    <Stack direction='column' spacing={2} sx={{ width: '100%', pb: 2 }}>
+                    <Stack direction='column' spacing={2} sx={{ width: '100%', pb:2, px:1 }}>
                         <WhatIDoItem 
                             IconComponent={BuildIcon} 
                             label="Development Tools" 

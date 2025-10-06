@@ -15,7 +15,7 @@ export default function WhatIDoItem({
 
     return (
         <Paper elevation={5} sx={[
-            { p:2, display: 'flex', justifyContent: 'center', alignItems: 'start' },
+            { p:2, display: 'flex', justifyContent: 'center', alignItems: 'start', minHeight: 180 },
             (theme) => ({
                 ...theme.applyStyles('dark', {
                     backgroundColor: gray[900],
