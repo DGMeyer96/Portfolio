@@ -64,7 +64,7 @@ export default function Projects() {
                         <Typography variant="body1">
                             This project originally began as a personal project. I became fascinated with creating a custom Android Automotive OS (AAOS) Image with a simulated CANBUS. 
                             As I started development on the project a couple of friends of mine reached out and were interested in developing an app for it after I had showed it to them.
-                            I had already begun work on a backend library taht could be used in conjuction with a frontend to hook into AAOS and the CAN-BUS. 
+                            I had already begun work on a backend library that could be used in conjuction with a frontend to hook into AAOS and the CAN-BUS. 
                         </Typography>
                         <Typography variant="body1">
                             To this day I am the software architect and primary backend engineer of this project. I architected the backend to be completely stateless and support
